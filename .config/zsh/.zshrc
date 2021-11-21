@@ -12,10 +12,6 @@ HISTFILE=~/.cache/zsh/history
 # Load aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
 # Auto/tab complete
 autoload -U compinit
 zstyle ':completion:*' menu select
