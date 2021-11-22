@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Load Xresources if they exist
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources" ] && xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources
+
+xcompmgr &
