@@ -2,6 +2,9 @@
 # Heavily inspired by Luke Smith's voidrice.
 # https://github.com/LukeSmithxyz/voidrice
 
+# Adds `~/.local/bin` to $PATH
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+
 # Default programs
 export EDITOR="vim"
 export TERMINAL="st"

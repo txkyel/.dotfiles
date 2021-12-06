@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# Load wal xresources if they exist, otherwise try loading default xresources
-if [ -f "${XDG_CACHE_HOME:-$HOME/.cache}/wal/colors.Xresources" ]; then
-	xrdb -merge -quiet ${XDG_CACHE_HOME:-$HOME/.cache}/wal/colors.Xresources
-elif [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources" ]; then
-	xrdb -merge -quiet ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources
-fi
+setbg &		# set background with `setbg` script, modified from Luke Smith's voidrice
 
 xcompmgr &
