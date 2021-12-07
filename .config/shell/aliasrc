@@ -1,3 +1,5 @@
 # If $XINITRC exists use as variabel
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias ..="cd .."

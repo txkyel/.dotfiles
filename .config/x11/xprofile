@@ -1,5 +1,6 @@
 #!/bin/sh
 
 setbg &		# set background with `setbg` script, modified from Luke Smith's voidrice
+dwmblocks &
 
 xcompmgr &
