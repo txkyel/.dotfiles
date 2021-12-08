@@ -1,5 +1,25 @@
+#!/bin/sh
+
+# Use neovim as vim
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
 # If $XINITRC exists use as variabel
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
 
+# Managing bare repo for dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Use colorized commands when possible
+alias ls="ls -h --color=auto --group-directories-first"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+
+# Verbose and confirm commands
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -vI"
+alias mkdir="mkdir -pv"
+
+# Shortened commands
+alias ll="ls -la"
 alias ..="cd .."
