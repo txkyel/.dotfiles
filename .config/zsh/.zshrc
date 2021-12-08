@@ -41,10 +41,10 @@ echo -ne '\e[5 q'		 # Use bar cursor on start
 preexec() { echo -ne '\e[5 q' ;} # Use bar cursor for each new prompt
 
 # key bindings
-bindkey -v '^?' backward-delete-char	# Enable backspace in vi mode
-bindkey -v '^[[P' delete-char		# Enable delete in vi mode
-bindkey '^[[P' delete-char		# Enable delete
-bindkey -a -r ':'			# Disable execute-named-cmd
+bindkey -v '^?' backward-delete-char	# Enable backspace in main and viins mode
+bindkey -v '^[[P' delete-char		# Enable delete in main and viins mode
+bindkey -a '^[[P' delete-char		# Enable delete in vicmd mode
+bindkey -a -r ':'			# Disable execute-named-cmd in vicmd mode
 
 # Edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
