@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Script assumes all suckless programs and utilities are stored in directory $HOME/.local/src
+SRC_DIR="$HOME/.local/src/suckless"
+
+# Iterate over directories in suckless directory
+for app_dir in $SRC_DIR/*; do
+	echo "Pulling and installing $(basename $app_dir)"
+	(cd "$app_dir" && git pull && sudo make clean install)>/dev/null || echo "Failed to install $app"
+	echo
+done
