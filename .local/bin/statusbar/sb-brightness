@@ -1,0 +1,7 @@
+#!/bin/bash
+
+brightness=$(xbacklight -get 2>/dev/null)
+
+[ ! $brightness ] && exit
+
+printf("☀️$brightness%\n")
