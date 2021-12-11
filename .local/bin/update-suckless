@@ -1,11 +1,17 @@
 #!/bin/bash
 
-# Script assumes all suckless programs and utilities are stored in directory $HOME/.local/src
+# Script assumes all suckless programs and utilities are stored in the directory $HOME/.local/src/suckless
 SRC_DIR="$HOME/.local/src/suckless"
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NC='\033[0m'
 
 # Iterate over directories in suckless directory
 for app_dir in $SRC_DIR/*; do
-	echo "Pulling and installing $(basename $app_dir)"
-	(cd "$app_dir" && git pull && sudo make clean install)>/dev/null || echo "Failed to install $app"
+	echo -e "${BOLD}Pulling and installing $(basename $app_dir)${NC}"
+	((cd "$app_dir" && git pull && sudo make clean install) >/dev/null 2>&1 && echo -e "${GREEN}Success!${NC}") \
+		|| echo -e "${RED}Failed to install $(basename $app_dir)${NC}"
 	echo
 done
