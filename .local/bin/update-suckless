@@ -1,17 +1,19 @@
 #!/bin/bash
 
 # Script assumes all suckless programs and utilities are stored in the directory $HOME/.local/src/suckless
-SRC_DIR="$HOME/.local/src/suckless"
+SRC_DIR="$HOME/.local/src"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BOLD='\033[1m'
 NC='\033[0m'
 
+apps="dwm dwmblocks dmenu st"
+
 # Iterate over directories in suckless directory
-for app_dir in $SRC_DIR/*; do
-	echo -e "${BOLD}Pulling and installing $(basename $app_dir)${NC}"
-	((cd "$app_dir" && git pull && sudo make clean install) >/dev/null 2>&1 && echo -e "${GREEN}Success!${NC}") \
-		|| echo -e "${RED}Failed to install $(basename $app_dir)${NC}"
+for app in $apps; do
+	echo -e "${BOLD}Pulling and installing $app${NC}"
+	((cd "$SRC_DIR/$app" && git pull && sudo make clean install) >/dev/null 2>&1 && echo -e "${GREEN}Success!${NC}") \
+		|| echo -e "${RED}Failed to install $app${NC}"
 	echo
 done
