@@ -2,4 +2,5 @@
 *.alpha: 0.8
 
 !! Set a default font and font size as below :
-*.font: monospace:size=10
+*.font:  DejaVu Sans Mono:size=10
+*.font2: JoyPixels:pixelsize=10:antialias=true:autohint=true
