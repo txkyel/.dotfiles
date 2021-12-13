@@ -24,6 +24,12 @@ _comp_options+=(globdots)		# Include hidden files
 bindkey -v
 export KEYTIMEOUT=1
 
+# Use vim keys to navigate tab complete:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+
 # Change cursort shape for different vi modes
 function zle-keymap-select () {
 	case $KEYMAP in
@@ -49,3 +55,7 @@ bindkey -a -r ':'			# Disable execute-named-cmd in vicmd mode
 # Edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
+bindkey -a '^e' edit-command-line
+
+# Load syntax highlighting; should be last.
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
