@@ -33,5 +33,5 @@ for battery in /sys/class/power_supply/BAT?*; do
 	# Low battery status
 	[ "$status" = "🔋" ] && [ "$capacity" -le 25 ] && status"🪫"
 	# Prints the info
-	printf "%s%d%%" "$status" "$capacity" 
+	printf "%s %d%%" "$status" "$capacity" 
 done && printf "\n"
