@@ -6,4 +6,7 @@ dwmblocks &
 
 xcompmgr &
 
+# Setting capslock to control on hold and escape on press and release (within 200ms)
+setxkbmap us -option 'caps:ctrl_modifier' && xcape -t 200 -e 'Caps_Lock=Escape' &
+
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
