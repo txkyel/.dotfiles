@@ -1,6 +1,52 @@
 !! Transparency (0-1):
-*.alpha: 0.8
+*.alpha: 0.85
 
 !! Set a default font and font size as below :
 *.font:  DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true
 *.font2: Noto Color Emoji:pixelsize=12:antialias=true:autohint=true
+
+!! Colors 0-15.
+*.color0: #090433
+*color0:  #090433
+*.color1: #E169EB
+*color1:  #E169EB
+*.color2: #41C4F0
+*color2:  #41C4F0
+*.color3: #A39AE8
+*color3:  #A39AE8
+*.color4: #E397F3
+*color4:  #E397F3
+*.color5: #F7B1F9
+*color5:  #F7B1F9
+*.color6: #A2EFFD
+*color6:  #A2EFFD
+*.color7: #ede1f5
+*color7:  #ede1f5
+*.color8: #a59dab
+*color8:  #a59dab
+*.color9: #E169EB
+*color9:  #E169EB
+*.color10: #41C4F0
+*color10:  #41C4F0
+*.color11: #A39AE8
+*color11:  #A39AE8
+*.color12: #E397F3
+*color12:  #E397F3
+*.color13: #F7B1F9
+*color13:  #F7B1F9
+*.color14: #A2EFFD
+*color14:  #A2EFFD
+*.color15: #ede1f5
+*color15:  #ede1f5
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #090433
+*color66:  #090433
+
+!! Foregroud and background colors
+*foreground:        #ede1f5
+*background:        #090433
+*cursorColor:  	    #ede1f5
+*.foreground:       #ede1f5
+*.background:       #090433
+*.cursorColor:      #ede1f5
