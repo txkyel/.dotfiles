@@ -8,6 +8,7 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="st"
+export BROWSER="chromium"
 
 # XDG paths
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -21,5 +22,9 @@ export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export SSB_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zoom"
+
+# Fixing Java Apps
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
