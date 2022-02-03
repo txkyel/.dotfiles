@@ -23,3 +23,6 @@ alias mkdir="mkdir -pv"
 # Shortened commands
 alias ll="ls -la"
 alias ..="cd .."
+
+alias code="code --user-data-dir \"$XDG_CONFIG_HOME/vscode\" --extensions-dir \"$XDG_DATA_HOME/vscode\""
+
