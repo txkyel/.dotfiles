@@ -7,7 +7,7 @@
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
 
 # Managing bare repo for dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias config="/usr/bin/git --git-dir=$HOME/.local/src/dotfiles/ --work-tree=$HOME"
 
 # Use colorized commands when possible
 alias ls="ls -h --color=auto --group-directories-first"
